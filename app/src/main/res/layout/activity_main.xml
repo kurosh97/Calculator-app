@@ -12,8 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="#efefef"
+        android:gravity="right|center_vertical|bottom"
         android:maxLength="12"
-        android:text=""
+        android:padding="10dp"
+        android:text="0"
         android:textSize="48sp" />
     <!-- row one -->
     <LinearLayout
@@ -198,10 +200,9 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:text="CRL"
             android:onClick="onClear"
-            android:textSize="20sp"
-            />
+            android:text="CRL"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btndivision"
