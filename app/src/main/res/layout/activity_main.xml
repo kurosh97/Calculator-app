@@ -55,7 +55,7 @@
 
 
         <Button
-            android:id="@+id/btnPlus"
+            android:id="@+id/onOperator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
@@ -111,7 +111,7 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="*"
             android:textSize="30sp" />
     </LinearLayout>
@@ -159,7 +159,7 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="-"
             android:textSize="30sp" />
 
@@ -178,7 +178,7 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onDesimalPoint"
             android:text="."
             android:textSize="30sp" />
 
@@ -198,10 +198,9 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:text="CRL"
             android:onClick="onClear"
-            android:textSize="20sp"
-            />
+            android:text="CRL"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btndivision"
@@ -209,7 +208,7 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="/"
             android:textSize="30sp" />
     </LinearLayout>
