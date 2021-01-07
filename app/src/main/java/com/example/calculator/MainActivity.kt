@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import java.lang.ArithmeticException
 
 class MainActivity : AppCompatActivity() {
     var lastNumeric: Boolean = false
@@ -42,6 +43,34 @@ class MainActivity : AppCompatActivity() {
             lastDot = true;
         }
     }
+
+    fun onEqual(view: View) {
+        val input: TextView = findViewById<TextView>(R.id.tvInput);
+        if (lastNumeric) {
+            var tvValue = input.text.toString()
+            var preFix = ""
+
+            try {
+                if (preFix.startsWith("-")) {
+                    preFix = "-"
+                    tvValue = tvValue.substring(1)
+                }
+                if (tvValue.contains("-")) {
+                    val splitValue = tvValue.split("-")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    if (!preFix.isEmpty()) {
+                        one = preFix + one
+                    }
+                    input.text = (one.toDouble() - two.toDouble()).toString()
+                }
+            } catch (e: ArithmeticException) {
+                e.printStackTrace()
+            }
+        }
+
+    }
+
 
     fun onOperator(view: View) {
         val input: TextView = findViewById<TextView>(R.id.tvInput);

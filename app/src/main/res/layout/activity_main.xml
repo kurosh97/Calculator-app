@@ -55,12 +55,12 @@
 
 
         <Button
-            android:id="@+id/onOperator"
+            android:id="@+id/btnPlus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:text="+"
             android:textSize="30sp" />
 
@@ -198,9 +198,10 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
-            android:onClick="onClear"
             android:text="CRL"
-            android:textSize="20sp" />
+            android:onClick="onClear"
+            android:textSize="20sp"
+            />
 
         <Button
             android:id="@+id/btndivision"
@@ -227,7 +228,7 @@
             android:layout_marginHorizontal="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onEqual"
             android:text="="
             android:textSize="30sp" />
     </LinearLayout>
